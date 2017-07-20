@@ -13,11 +13,15 @@ Copyright (c) | 2017 | Shuang Wu
 I believe you must have played Mahjong Solitaire before, but as a girl from China where real Mahjong was invented, I have to tell you the truth: real Mahjong is a gambling game which lots of Chinese are playing with their friends in entirely different way from Mahjong Solitaire's rules. Most importantly, since it is gambling, older generations don't really let younger generations touch it until they grow up.
 
 However, how simple and engaging this game is makes it addicting: only goal is to remove every tile by matching pairs of identical tiles. Therefore I am creating a younger-generation-friendly game which is much simpler but still very fun, all you need to do is the match identical pairs of tiles. There are 4 different themes player can choose from:
-1)"Nom Nom Nom" Food Theme
+1. "Nom Nom Nom" Food Theme
 ![alt text](https://github.com/wwsskkaa/Lets-Pop/blob/master/screenshots/food%20theme.png)
-2)"Transformers" Transportation Theme
-3)"Under the Sea" Sealife Theme
-4)"Animal Kindom" Animal Theme
+2. "Transformers" Transportation Theme
+<p align="center">
+  <img src="https://github.com/wwsskkaa/Lets-Pop/blob/master/screenshots/food%20theme.png" width="350"/>
+  <img src="https://github.com/wwsskkaa/Lets-Pop/blob/master/screenshots/food%20theme.png" width="350"/>
+</p>
+3. "Under the Sea" Sealife Theme
+4. "Animal Kindom" Animal Theme
 
 # Rules:
 1) What is score: you will cummulate score every single match&pop happens, how much score you will get is based on how far and how many angle turns you have to make to connect the 2 tiles
