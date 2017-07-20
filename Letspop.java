@@ -8,8 +8,10 @@ import java.io.*;
 public class Letspop implements ActionListener
 {
     JFrame mainFrame;
+    JWindow helperWindow;
+    JPanel helperPanel;
     JPanel cPan,sPan,nPan,ePan,wPan,nPanSub;
-    JButton firstButton,secondButton,reassembleButton,exitButton,newGameButton;//record the 2 jbuttons that get selected for comparison
+    JButton firstButton,secondButton,reassembleButton,exitButton,newGameButton,helpButton;//record the 2 jbuttons that get selected for comparison
     JLabel scoremarks=new JLabel("0"); //score
     JLabel space=new JLabel("                  "); //score
     JLabel scoreLabel=new JLabel("Current Score: "); //score string label
@@ -23,6 +25,7 @@ public class Letspop implements ActionListener
     static boolean ifAnyPressed=false; //if any button is selected
 
     public void setBoard() {
+        
         mainFrame=new JFrame("Let's Pop");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         thisCont = mainFrame.getContentPane();
@@ -94,6 +97,12 @@ public class Letspop implements ActionListener
         newGameButton.setFont(new Font("Georgia", Font.PLAIN, 15));
         newGameButton.setForeground(background);
         newGameButton.addActionListener(this);
+
+        helpButton=new JButton("?");
+        helpButton.setFont(new Font("Georgia", Font.PLAIN, 15));
+        helpButton.setForeground(background);
+        helpButton.addActionListener(this);
+        sPan.add(helpButton);
 
         sPan.add(reassembleButton);
         sPan.add(exitButton);
@@ -453,6 +462,16 @@ public void actionPerformed(ActionEvent e) {
         potionNumber.setText(String.valueOf(currentpotion));
         scoremarks.setText(String.valueOf(currentscore));
         reload();
+    }
+    if(e.getSource()==helpButton){
+        HelperScreen hel=new HelperScreen();
+        try{
+            hel.setHelperScreen();
+            hel.setVisible(true);
+        }
+        catch (Exception h) {
+        h.printStackTrace();
+        }
     }
     if(e.getSource()==exitButton) {
         ImageIcon logo = new ImageIcon("cry.png");

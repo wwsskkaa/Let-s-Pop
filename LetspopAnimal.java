@@ -9,7 +9,7 @@ public class LetspopAnimal implements ActionListener,KeyListener
 {
     JFrame mainFrame;
     JPanel cPan,sPan,nPan,ePan,wPan,nPanSub;
-    JButton firstButton,secondButton,reassembleButton,exitButton,newGameButton;//record the 2 jbuttons that get selected for comparison
+    JButton firstButton,secondButton,reassembleButton,exitButton,newGameButton,helpButton;//record the 2 jbuttons that get selected for comparison
     JLabel scoremarks=new JLabel("0"); //score
     JLabel space=new JLabel("                  "); //score
     JLabel scoreLabel=new JLabel("Current Score: "); //score string label
@@ -99,6 +99,13 @@ public class LetspopAnimal implements ActionListener,KeyListener
         newGameButton.setForeground(background);
         newGameButton.addActionListener(this);
         newGameButton.addKeyListener(this);
+
+        helpButton=new JButton("?");
+        helpButton.setFont(new Font("Georgia", Font.PLAIN, 15));
+        helpButton.setForeground(background);
+        helpButton.addActionListener(this);
+        sPan.add(helpButton);
+
         sPan.add(reassembleButton);
         sPan.add(exitButton);
         sPan.add(newGameButton);
@@ -517,6 +524,16 @@ public void actionPerformed(ActionEvent e) {
         JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,logo)== JOptionPane.YES_OPTION)
         {
            System.exit(0);
+        }
+    }
+    if(e.getSource()==helpButton){
+        HelperScreen hel=new HelperScreen();
+        try{
+            hel.setHelperScreen();
+            hel.setVisible(true);
+        }
+        catch (Exception h) {
+        h.printStackTrace();
         }
     }
     for(int cols=0; cols < 6; cols++) {
